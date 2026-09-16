@@ -12,10 +12,10 @@ Create a DataFrame assigned as `VisComm` containing students whose `Hometown` is
 
 The DataFrame and its number of rows must be displayed.
 
-
-* `pd.read_excel` - loads an excel or .xlsx file into the python code
-*  `df['Average']=df[['Math', 'Electronics']].mean(axis=1)` - gets the mean of the columns inside the double bracket, while `axis=1` specifies that the average is taken from the row instead of the column
-*  `.shape[]` - states the number of rows and or columns specified inside the bracket as 0 or 1 respectively
+* `import pandas as pd` - loads the pandas library into the code and is assigned as pd.
+* `pd.read_excel` - loads an excel or .xlsx file into the python code.
+*  `df['Average']=df[['Math', 'Electronics']].mean(axis=1)` - gets the mean of the columns inside the double bracket, while `axis=1` specifies that the average is taken from the row instead of the column.
+*  `.shape[]` - states the number of rows and or columns specified inside the bracket as 0 or 1 respectively.
 
 #### Code
 ```python
