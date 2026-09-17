@@ -64,6 +64,7 @@ In this problem, the code must display three summary tables of the Average of ea
 * `axes[].set_ylabel()` - names the Y-axis of the bar chart inside the parenthesis.
 * `plt.ylim()` - sets the Y-axis' limit specified inside the parenthesis
 * `plt.tight_layout()` - organizes the overall layout as to prevent overlaps and uneven spacing between the graphs
+* `fig.text()` - inserts text into the figure with the positioning, actual text, and other features such as text style being specified inside the parenthesis
 
 ```python
 df['Average'] = df[['Math', 'Electronics', 'GEAS', 'Communication']].mean(axis=1)
@@ -79,7 +80,7 @@ Hometown
 
 import matplotlib.pyplot as plt
 
-fig, axes = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
 axes[0].bar(Track['Track'], Track['Average'])
 axes[0].set_title('Mean Average by Track')
@@ -91,8 +92,10 @@ axes[1].set_title('Mean Average by Gender')
 axes[2].bar(Hometown['Hometown'], Hometown['Average'], color='green')
 axes[2].set_title('Mean Average by Hometown')
 
-plt.ylim(0, 100)
+plt.ylim(0, 70)
 plt.tight_layout()
+fig.text(0,-0.1,'Interpretation\nTrack - The Communication track had the highest average score of 67.975.\nGender - Male students had the highest average score of 67.183. \nHometown - Students from Luzon recorded the highest average score of 68.083',
+         style='normal')
 plt.show()
 ```
 
@@ -100,5 +103,8 @@ plt.show()
 
 #### READMe file Version History 
 September 16, 2026 - Initial READMe output created. 
-September 17, 2026 - READMe output updated content.
+
+September 17, 2026 - READMe output and actual code updated.
+
+
 
