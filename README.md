@@ -14,7 +14,7 @@ The DataFrame and its number of rows must be displayed.
 
 * `import pandas as pd` - loads the pandas library into the code and is assigned as pd.
 * `pd.read_excel` - loads an excel or .xlsx file into the python code.
-*  `df['Average']=df[['Math', 'Electronics']].mean(axis=1)` - gets the mean of the columns inside the double bracket, while `axis=1` specifies that the average is taken from the row instead of the column.
+*  `df['Average']=df[['Math', 'Electronics', 'GEAS', 'Communication']].mean(axis=1))` - gets the mean of the columns inside the double bracket, while `axis=1` specifies that the average is taken from the row instead of the column.
 *  `.shape[]` - states the number of rows and or columns specified inside the bracket as 0 or 1 respectively.
 
 #### Code
@@ -24,7 +24,7 @@ import pandas as pd
 df = pd.read_excel('board2.xlsx')
 df
 
-df['Average']=df[['Math', 'Electronics']].mean(axis=1)
+df['Average']=df[['Math', 'Electronics', 'GEAS', 'Communication']].mean(axis=1)
 VisComm = df.loc[(df['Hometown']=='Visayas')&(df['Track']=='Communication'), ['Name', 'Gender', 'Math', 'Electronics', 'Average']]
 VisComm
 
@@ -36,13 +36,13 @@ Create a second DataFrame assigned as `VisFemale` containing students whose `Hom
 
 After displaying `VisFemale`, the code must also display the rows in which the `Average` is `at least 60`.
 
-* `df['Average']=df[['GEAS', 'Electronics']].mean(axis=1)` - gets the mean of the columns GEAS and Electronics inside the double bracket, while specifying the average taken by row denoted by `axis=1`
+* `df['Average']=df[['Math', 'Electronics', 'GEAS', 'Communication']].mean(axis=1)` - gets the mean of the columns Math, Electronics, GEAS, and Communication inside the double bracket, while specifying the average taken by row denoted by `axis=1`
 * `VisFemale = df.loc[(df['Hometown']=='Visayas')&(df['Gender']=='Female'), ['Name', 'Track', 'GEAS', 'Electronics', 'Average']]` - calls the rows that the Hometown is Visayas and Gender is Female while displaying the Name, Track, GEAS, Electronics and the average for both.
 * `VisFemale60 = VisFemale.loc[(VisFemale['Average']>=60)]` - calls the Averages that are greater than or equal to 60.
 
 #### Code
 ```python
-df['Average']=df[['GEAS', 'Electronics']].mean(axis=1)
+df['Average']=df[['Math', 'Electronics', 'GEAS', 'Communication']].mean(axis=1
 
 VisFemale = df.loc[(df['Hometown']=='Visayas')&(df['Gender']=='Female'), ['Name', 'Track', 'GEAS', 'Electronics', 'Average']]
 VisFemale
